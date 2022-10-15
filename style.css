@@ -1,0 +1,101 @@
+a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  background-color: #caf;
+  color: #217;
+}
+
+a:hover {
+  /*pseudoclasse hover: passar o mouse*/
+  background: #adf;
+  color: #147;
+}
+
+a:focus {
+  /*Elemento em foco, usando o teclado (tab).*/
+  background: #cfa;
+  color: #371;
+}
+
+a:active {
+  /*Quando clicamos no elemento.*/
+  background: #ffa;
+  color: #761;
+}
+
+/*a:visited {
+  Para links que já foram visitados.
+  background: #fda;
+  color: #731;
+}*/
+
+.lista-1 li:first-child {
+  /*Seleciona o primeiro elemento.*/
+  background: #caf;
+}
+
+.lista-1 li:last-child {
+  /*Seleciona o último elemento.*/
+  background: green;
+}
+
+/* terceiro elemento */
+.lista-1 li:nth-child(3) {
+  background: #fda;
+}
+
+/* elementos ímpares */
+.lista-2 li:nth-child(odd) {
+  background: blue;
+}
+
+/* elementos pares */
+.lista-2 li:nth-child(even) {
+  background: #adf;
+}
+
+/* todos menos first-child e last-child */
+ol li:not(:first-child, :last-child) {
+  background: #adf;
+}
+
+/* todos h2's dentro de section, menos o que tiver a classe .contato */
+section h2:not(.contato) {
+  text-decoration: underline;
+}
+
+/*Os pseudo elements ::before e ::after criam elementos HTML com base no seletor. content: Definir um conteúdo para o elemento é essencial para ele existir, mesmo que o conteúdo esteja vazio.*/
+
+h3::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #caf;
+}
+
+ul {
+  list-style: none;
+}
+
+.lista-4 {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.lista-4::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(#caf, #fff);
+  border: 2px solid #caf;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+/*Pseudo elements: ::first-line seleciona a primeira linha do conteúdo. ::first-letter Seleciona a primeira letra do conteúdo.*/
